@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="cover" id="cover">
+  <p class="kicker">Together with their families</p>
+  <div class="envelope" id="envelope" aria-hidden="true">
+    <div class="letter"></div>
+    <div class="flap"></div>
+    <div class="seal"><svg viewBox="0 0 40 40"><path d="M20 4l4 10 10-4-4 10 10 4-10 4 4 10-10-4-4 10-4-10-10 4 4-10-10-4 10-4-4-10 10 4z" fill="currentColor"/></svg></div>
+  </div>
+  <h1 class="names script"><span data-f="bride"></span> &amp; <span data-f="groom"></span></h1>
+  <button class="btn glow" id="openBtn" type="button">Open invitation</button>
+</section>
+
+<main id="card">
+  <header class="hero frame">
+    <p class="bismillah">In the name of Allah, the Most Gracious, the Most Merciful</p>
+    <h2 class="names script"><span data-f="bride"></span><i>&amp;</i><span data-f="groom"></span></h2>
+    <p class="parents"><span data-f="brideParents"></span><br>and<br><span data-f="groomParents"></span></p>
+    <p class="msg" data-f="message"></p>
+    <p class="when"><span data-f="dayName"></span>, <span data-f="dateLong"></span><br>at <span data-f="timeStr"></span></p>
+    <p class="where"><strong data-f="venue"></strong><br><span data-f="address"></span></p>
+  </header>
+
+  <section class="count" aria-label="Countdown">
+    <div><b id="cd-d">0</b><span>days</span></div><div><b id="cd-h">0</b><span>hours</span></div>
+    <div><b id="cd-m">0</b><span>minutes</span></div><div><b id="cd-s">0</b><span>seconds</span></div>
+  </section>
+  <p class="cd-note" id="cdNote"></p>
+
+  <section class="events-wrap">
+    <h3 class="script">The celebrations</h3>
+    <div class="events" id="events"></div>
+  </section>
+
+  <section class="gallery-wrap" id="galleryWrap">
+    <h3 class="script">Moments</h3>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <section class="actions">
+    <a class="btn" id="mapBtn" target="_blank" rel="noopener">Open in Google Maps</a>
+    <a class="btn" id="waBtn" target="_blank" rel="noopener">RSVP on WhatsApp</a>
+    <button class="btn" id="shareBtn" type="button">Share invitation</button>
+    <button class="btn" id="pdfBtn" type="button">Save as PDF</button>
+  </section>
+  <footer><a href="#admin" id="ownerLink">Owner login</a></footer>
+</main>
+
+<button class="music" id="musicBtn" type="button" hidden aria-label="Play or pause music">♪</button>
+<audio id="audio" loop preload="none"></audio>
+<div class="toast" id="toast" role="status"></div>
+
+<aside class="admin" id="admin" hidden></aside>
+<button class="btn back" id="backBtn" type="button" hidden>Back to editor</button>
+
+<script src="script.js"></script>
+</body>
+</html>
